@@ -1,0 +1,917 @@
+{
+  "schema_version": 1,
+  "diagram_type": "dataflow",
+  "meta": {
+    "title": "LoopForge 数据流：输入、执行、证据与交付",
+    "output": ".archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/wnz27/LoopForge-learn-k7.git",
+      "revision": "7cc59111848653ee45c08525b511aca6c01809be"
+    }
+  },
+  "stages": [
+    {
+      "label": "输入与来源"
+    },
+    {
+      "label": "身份与预留"
+    },
+    {
+      "label": "编排与控制"
+    },
+    {
+      "label": "执行与处理"
+    },
+    {
+      "label": "持久证据与消费"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "request",
+      "type": "frontend",
+      "label": "需求与消息",
+      "sublabel": "web / chatbot / MCP",
+      "stage": 0,
+      "row": 0,
+      "sources": [
+        {
+          "path": "chatbot/src/useChat.js",
+          "line": 881,
+          "end_line": 891
+        },
+        {
+          "path": "internal/httpapi/dispatch.go",
+          "line": 191,
+          "end_line": 213
+        },
+        {
+          "path": "internal/mcpserver/server.go",
+          "line": 84,
+          "end_line": 107
+        }
+      ]
+    },
+    {
+      "id": "identity",
+      "type": "security",
+      "label": "身份与写审批",
+      "sublabel": "会话 / Token / 审批模式",
+      "stage": 1,
+      "row": 0,
+      "sources": [
+        {
+          "path": "internal/httpapi/auth_tokens.go",
+          "line": 93,
+          "end_line": 130
+        },
+        {
+          "path": "internal/httpapi/assistant_write.go",
+          "line": 14,
+          "end_line": 40
+        }
+      ]
+    },
+    {
+      "id": "assistant",
+      "type": "backend",
+      "label": "对话后台生成",
+      "sublabel": "澄清 / 工具 / 工作区",
+      "stage": 2,
+      "row": 0,
+      "sources": [
+        {
+          "path": "internal/httpapi/assistant_generation.go",
+          "line": 154,
+          "end_line": 197
+        },
+        {
+          "path": "internal/httpapi/assistant_generation.go",
+          "line": 340,
+          "end_line": 379
+        },
+        {
+          "path": "internal/httpapi/assistant_generation.go",
+          "line": 430,
+          "end_line": 445
+        }
+      ]
+    },
+    {
+      "id": "sessiondb",
+      "type": "database",
+      "label": "会话与生成表",
+      "sublabel": "MySQL · transcript / 事件",
+      "stage": 3,
+      "row": 0,
+      "sources": [
+        {
+          "path": "internal/repo/assistant_generations.go",
+          "line": 170,
+          "end_line": 223
+        },
+        {
+          "path": "internal/repo/assistant.go",
+          "line": 227,
+          "end_line": 241
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "type": "frontend",
+      "label": "交互与分析",
+      "sublabel": "SSE / HTTP / 指标",
+      "stage": 4,
+      "row": 0,
+      "sources": [
+        {
+          "path": "chatbot/src/useChat.js",
+          "line": 409,
+          "end_line": 443
+        },
+        {
+          "path": "web/app/observability.js",
+          "line": 346,
+          "end_line": 358
+        }
+      ]
+    },
+    {
+      "id": "catalog",
+      "type": "database",
+      "label": "定义与凭据表",
+      "sublabel": "MySQL · 资产 / 个人 Key",
+      "stage": 0,
+      "row": 1,
+      "sources": [
+        {
+          "path": "internal/repo/catalog.go",
+          "line": 101,
+          "end_line": 112
+        },
+        {
+          "path": "internal/repo/catalog.go",
+          "line": 548,
+          "end_line": 565
+        },
+        {
+          "path": "internal/repo/users.go",
+          "line": 25,
+          "end_line": 51
+        }
+      ]
+    },
+    {
+      "id": "dispatch",
+      "type": "backend",
+      "label": "需求派发预留",
+      "sublabel": "Task 幂等 / 仓库绑定",
+      "stage": 1,
+      "row": 1,
+      "sources": [
+        {
+          "path": "internal/httpapi/dispatch.go",
+          "line": 171,
+          "end_line": 245
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "SOP 调度引擎",
+      "sublabel": "DAG / 审批 / 重试 / 子 SOP",
+      "stage": 2,
+      "row": 1,
+      "sources": [
+        {
+          "path": "internal/engine/node_execute.go",
+          "line": 90,
+          "end_line": 155
+        },
+        {
+          "path": "internal/engine/run_start.go",
+          "line": 67,
+          "end_line": 100
+        },
+        {
+          "path": "internal/engine/assets.go",
+          "line": 72,
+          "end_line": 85
+        }
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "CLI 与沙箱执行",
+      "sublabel": "Provider / 脚本 / 浏览器",
+      "stage": 3,
+      "row": 1,
+      "sources": [
+        {
+          "path": "internal/runtime/runner.go",
+          "line": 20,
+          "end_line": 32
+        },
+        {
+          "path": "internal/runtime/runner.go",
+          "line": 52,
+          "end_line": 101
+        },
+        {
+          "path": "internal/runner/exec.go",
+          "line": 47,
+          "end_line": 75
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "type": "database",
+      "label": "运行证据表",
+      "sublabel": "MySQL · Artifact / 遥测",
+      "stage": 4,
+      "row": 1,
+      "sources": [
+        {
+          "path": "internal/repo/runs.go",
+          "line": 1006,
+          "end_line": 1059
+        }
+      ]
+    },
+    {
+      "id": "trigger",
+      "type": "backend",
+      "label": "定时与导入",
+      "sublabel": "SOP 扫描 / AI prompt",
+      "stage": 0,
+      "row": 2,
+      "sources": [
+        {
+          "path": "internal/schedule/service.go",
+          "line": 286,
+          "end_line": 354
+        },
+        {
+          "path": "internal/tracker/github.go",
+          "line": 23,
+          "end_line": 47
+        }
+      ]
+    },
+    {
+      "id": "rundb",
+      "type": "database",
+      "label": "任务与运行表",
+      "sublabel": "MySQL · lease / 控制意图",
+      "stage": 1,
+      "row": 2,
+      "sources": [
+        {
+          "path": "internal/repo/runs.go",
+          "line": 927,
+          "end_line": 949
+        },
+        {
+          "path": "internal/repo/runs.go",
+          "line": 1101,
+          "end_line": 1138
+        },
+        {
+          "path": "internal/httpapi/dispatch.go",
+          "line": 191,
+          "end_line": 209
+        }
+      ]
+    },
+    {
+      "id": "runner",
+      "type": "backend",
+      "label": "远端执行机器",
+      "sublabel": "个人 / 执行池 / 租约",
+      "stage": 2,
+      "row": 2,
+      "sources": [
+        {
+          "path": "internal/runner/daemon.go",
+          "line": 148,
+          "end_line": 177
+        },
+        {
+          "path": "internal/runner/exec.go",
+          "line": 47,
+          "end_line": 120
+        }
+      ]
+    },
+    {
+      "id": "git",
+      "type": "backend",
+      "label": "Git 与托管适配",
+      "sublabel": "分支 / push / PR 状态",
+      "stage": 3,
+      "row": 2,
+      "sources": [
+        {
+          "path": "internal/gitwork/workbranch.go",
+          "line": 13,
+          "end_line": 80
+        },
+        {
+          "path": "internal/tracker/merge_mr.go",
+          "line": 20,
+          "end_line": 42
+        },
+        {
+          "path": "internal/engine/integrate.go",
+          "line": 50,
+          "end_line": 114
+        }
+      ]
+    },
+    {
+      "id": "hosting",
+      "type": "external",
+      "label": "代码托管平台",
+      "sublabel": "Git SSH/HTTPS · GitHub API",
+      "stage": 4,
+      "row": 2,
+      "sources": [
+        {
+          "path": "internal/gitwork/workbranch.go",
+          "line": 62,
+          "end_line": 80
+        },
+        {
+          "path": "internal/tracker/github.go",
+          "line": 23,
+          "end_line": 47
+        },
+        {
+          "path": "internal/tracker/merge_mr.go",
+          "line": 24,
+          "end_line": 30
+        }
+      ]
+    },
+    {
+      "id": "workspace",
+      "type": "database",
+      "label": "执行工作区文件",
+      "sublabel": "代码 / 附件 / CLI journal",
+      "stage": 0,
+      "row": 3,
+      "sources": [
+        {
+          "path": "internal/runtime/runner.go",
+          "line": 52,
+          "end_line": 59
+        },
+        {
+          "path": "internal/engine/artifacts.go",
+          "line": 25,
+          "end_line": 84
+        },
+        {
+          "path": "internal/engine/workspace_checkpoint_stream.go",
+          "line": 20,
+          "end_line": 58
+        }
+      ]
+    },
+    {
+      "id": "checkpoint",
+      "type": "backend",
+      "label": "工作区保存恢复",
+      "sublabel": "use token / checkpoint",
+      "stage": 1,
+      "row": 3,
+      "sources": [
+        {
+          "path": "internal/engine/workspace_checkpoint_stream.go",
+          "line": 20,
+          "end_line": 58
+        },
+        {
+          "path": "internal/runtime/workspace_checkpoint.go",
+          "line": 85,
+          "end_line": 110
+        }
+      ]
+    },
+    {
+      "id": "outcome",
+      "type": "backend",
+      "label": "结果校验与提交",
+      "sublabel": "gate / 产物 / 执行世代",
+      "stage": 2,
+      "row": 3,
+      "sources": [
+        {
+          "path": "internal/engine/node_outcome.go",
+          "line": 30,
+          "end_line": 85
+        },
+        {
+          "path": "internal/engine/artifacts.go",
+          "line": 25,
+          "end_line": 84
+        },
+        {
+          "path": "internal/repo/runs.go",
+          "line": 987,
+          "end_line": 1059
+        }
+      ]
+    },
+    {
+      "id": "publish",
+      "type": "backend",
+      "label": "产物与通知处理",
+      "sublabel": "归档 / 审核 / 发件队列",
+      "stage": 3,
+      "row": 3,
+      "sources": [
+        {
+          "path": "internal/preview/service.go",
+          "line": 236,
+          "end_line": 278
+        },
+        {
+          "path": "internal/notification/service.go",
+          "line": 129,
+          "end_line": 170
+        },
+        {
+          "path": "internal/knowledge/service.go",
+          "line": 404,
+          "end_line": 452
+        }
+      ]
+    },
+    {
+      "id": "consume",
+      "type": "backend",
+      "label": "预览 · Bot · 知识",
+      "sublabel": "访问包 / 消息 / MCP 文档",
+      "stage": 4,
+      "row": 3,
+      "sources": [
+        {
+          "path": "internal/preview/service.go",
+          "line": 75,
+          "end_line": 105
+        },
+        {
+          "path": "internal/notification/service.go",
+          "line": 188,
+          "end_line": 210
+        },
+        {
+          "path": "internal/knowledge/service.go",
+          "line": 430,
+          "end_line": 452
+        }
+      ]
+    },
+    {
+      "id": "localassets",
+      "type": "database",
+      "label": "Local 工作流资产",
+      "sublabel": "Classic / Portable",
+      "stage": 0,
+      "row": 4,
+      "sources": [
+        {
+          "path": "local/src/devflow_cli/editions.py",
+          "line": 18,
+          "end_line": 43
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "type": "backend",
+      "label": "Local 安装控制面",
+      "sublabel": "Node 桥接 Python CLI",
+      "stage": 1,
+      "row": 4,
+      "sources": [
+        {
+          "path": "local/bin/loopforge.mjs",
+          "line": 42,
+          "end_line": 64
+        },
+        {
+          "path": "local/src/devflow_cli/core.py",
+          "line": 200,
+          "end_line": 206
+        },
+        {
+          "path": "local/src/devflow_cli/core.py",
+          "line": 329,
+          "end_line": 364
+        }
+      ]
+    },
+    {
+      "id": "localstate",
+      "type": "backend",
+      "label": "Local 阶段状态机",
+      "sublabel": "prepare / finish / 确认",
+      "stage": 2,
+      "row": 4,
+      "sources": [
+        {
+          "path": "local/skills/devflow/scripts/workflow_state.py",
+          "line": 454,
+          "end_line": 490
+        },
+        {
+          "path": "local/skills/devflow/scripts/workflow_state.py",
+          "line": 709,
+          "end_line": 749
+        },
+        {
+          "path": "local/skills/devflow/scripts/workflow_state.py",
+          "line": 93,
+          "end_line": 105
+        }
+      ]
+    },
+    {
+      "id": "host",
+      "type": "external",
+      "label": "本地宿主 Agent",
+      "sublabel": "IDE / CLI · Team / spawn",
+      "stage": 3,
+      "row": 4,
+      "sources": [
+        {
+          "path": "local/skills/devflow/references/agent-execution.md",
+          "line": 5,
+          "end_line": 21
+        },
+        {
+          "path": "local/skills/devflow/adapters/codex/manifest.json",
+          "line": 1,
+          "end_line": 9
+        }
+      ]
+    },
+    {
+      "id": "localreports",
+      "type": "database",
+      "label": "本地产物与状态",
+      "sublabel": "artifacts/ · 报告与代码",
+      "stage": 4,
+      "row": 4,
+      "sources": [
+        {
+          "path": "local/skills/devflow/references/agent-execution.md",
+          "line": 7,
+          "end_line": 19
+        },
+        {
+          "path": "local/skills/devflow/scripts/workflow_state.py",
+          "line": 709,
+          "end_line": 749
+        },
+        {
+          "path": "local/skills/devflow/scripts/workflow_state.py",
+          "line": 93,
+          "end_line": 105
+        }
+      ]
+    }
+  ],
+  "flows": [
+    {
+      "id": "request-identity",
+      "from": "request",
+      "to": "identity",
+      "label": "消息/操作",
+      "variant": "emphasis"
+    },
+    {
+      "id": "identity-assistant",
+      "from": "identity",
+      "to": "assistant",
+      "label": "授权消息",
+      "variant": "security"
+    },
+    {
+      "id": "identity-dispatch",
+      "from": "identity",
+      "to": "dispatch",
+      "label": "授权派发",
+      "variant": "security"
+    },
+    {
+      "id": "assistant-sessiondb",
+      "from": "assistant",
+      "to": "sessiondb",
+      "label": "回复/事件",
+      "variant": "emphasis"
+    },
+    {
+      "id": "sessiondb-ui",
+      "from": "sessiondb",
+      "to": "ui",
+      "label": "SSE/查询",
+      "variant": "default"
+    },
+    {
+      "id": "catalog-dispatch",
+      "from": "catalog",
+      "to": "dispatch",
+      "label": "项目/仓库",
+      "variant": "default"
+    },
+    {
+      "id": "catalog-engine",
+      "from": "catalog",
+      "to": "engine",
+      "label": "图/角色",
+      "variant": "default"
+    },
+    {
+      "id": "catalog-identity",
+      "from": "catalog",
+      "to": "identity",
+      "label": "用户凭据",
+      "variant": "security"
+    },
+    {
+      "id": "dispatch-engine",
+      "from": "dispatch",
+      "to": "engine",
+      "label": "需求上下文",
+      "variant": "emphasis"
+    },
+    {
+      "id": "dispatch-rundb",
+      "from": "dispatch",
+      "to": "rundb",
+      "label": "Task/Run",
+      "variant": "default"
+    },
+    {
+      "id": "trigger-dispatch",
+      "from": "trigger",
+      "to": "dispatch",
+      "label": "到期需求",
+      "variant": "dashed"
+    },
+    {
+      "id": "trigger-assistant",
+      "from": "trigger",
+      "to": "assistant",
+      "label": "到期提示",
+      "variant": "dashed"
+    },
+    {
+      "id": "rundb-engine",
+      "from": "rundb",
+      "to": "engine",
+      "label": "状态/租约",
+      "variant": "default"
+    },
+    {
+      "id": "engine-runtime",
+      "from": "engine",
+      "to": "runtime",
+      "label": "本机调用",
+      "variant": "emphasis"
+    },
+    {
+      "id": "engine-runner",
+      "from": "engine",
+      "to": "runner",
+      "label": "远端任务",
+      "variant": "default"
+    },
+    {
+      "id": "runner-runtime",
+      "from": "runner",
+      "to": "runtime",
+      "label": "命令/凭据",
+      "variant": "default"
+    },
+    {
+      "id": "runtime-assistant",
+      "from": "runtime",
+      "to": "assistant",
+      "label": "CLI 事件",
+      "variant": "default"
+    },
+    {
+      "id": "assistant-runtime",
+      "from": "assistant",
+      "to": "runtime",
+      "label": "对话调用",
+      "variant": "default"
+    },
+    {
+      "id": "runtime-outcome",
+      "from": "runtime",
+      "to": "outcome",
+      "label": "输出/gate",
+      "variant": "emphasis"
+    },
+    {
+      "id": "runner-outcome",
+      "from": "runner",
+      "to": "outcome",
+      "label": "HTTP 上报",
+      "variant": "default"
+    },
+    {
+      "id": "outcome-rundb",
+      "from": "outcome",
+      "to": "rundb",
+      "label": "状态/控制",
+      "variant": "default"
+    },
+    {
+      "id": "outcome-evidence",
+      "from": "outcome",
+      "to": "evidence",
+      "label": "产物/遥测",
+      "variant": "emphasis"
+    },
+    {
+      "id": "evidence-ui",
+      "from": "evidence",
+      "to": "ui",
+      "label": "运行/报表",
+      "variant": "default"
+    },
+    {
+      "id": "workspace-checkpoint",
+      "from": "workspace",
+      "to": "checkpoint",
+      "label": "读取归档",
+      "variant": "default"
+    },
+    {
+      "id": "checkpoint-rundb",
+      "from": "checkpoint",
+      "to": "rundb",
+      "label": "快照/Token",
+      "variant": "default"
+    },
+    {
+      "id": "engine-git",
+      "from": "engine",
+      "to": "git",
+      "label": "交付分支",
+      "variant": "default"
+    },
+    {
+      "id": "runner-git",
+      "from": "runner",
+      "to": "git",
+      "label": "远端 Git",
+      "variant": "default"
+    },
+    {
+      "id": "git-hosting",
+      "from": "git",
+      "to": "hosting",
+      "label": "push/PR",
+      "variant": "emphasis"
+    },
+    {
+      "id": "workspace-git",
+      "from": "workspace",
+      "to": "git",
+      "label": "代码/diff",
+      "variant": "default"
+    },
+    {
+      "id": "outcome-publish",
+      "from": "outcome",
+      "to": "publish",
+      "label": "合格产物",
+      "variant": "default"
+    },
+    {
+      "id": "workspace-publish",
+      "from": "workspace",
+      "to": "publish",
+      "label": "预览源文件",
+      "variant": "default"
+    },
+    {
+      "id": "publish-consume",
+      "from": "publish",
+      "to": "consume",
+      "label": "归档/写回",
+      "variant": "default"
+    },
+    {
+      "id": "evidence-publish",
+      "from": "evidence",
+      "to": "publish",
+      "label": "事件/候选",
+      "variant": "default"
+    },
+    {
+      "id": "localassets-install",
+      "from": "localassets",
+      "to": "install",
+      "label": "资产清单",
+      "variant": "default"
+    },
+    {
+      "id": "install-localstate",
+      "from": "install",
+      "to": "localstate",
+      "label": "安装 Skill",
+      "variant": "default"
+    },
+    {
+      "id": "localstate-host",
+      "from": "localstate",
+      "to": "host",
+      "label": "阶段提示",
+      "variant": "default"
+    },
+    {
+      "id": "host-localreports",
+      "from": "host",
+      "to": "localreports",
+      "label": "报告/代码",
+      "variant": "emphasis"
+    },
+    {
+      "id": "localreports-localstate",
+      "from": "localreports",
+      "to": "localstate",
+      "label": "校验/确认",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "如何读图",
+      "items": [
+        "前四行是平台数据职责，底行是独立的 LoopForge Local。节点表示逻辑数据职责，并不都对应独立服务进程。",
+        "定义、运行、会话和证据节点是同一 MySQL 的不同逻辑数据分区；不存在图外的 Redis/Kafka 必选组件。",
+        "平台的 HTTP/MCP 输入共享身份和领域权限；SOP 人工门禁与聊天工具审批分别控制各自写入。"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "执行与正确性",
+      "items": [
+        "Engine 可位于 all 或 worker。前驱成功才调度后继；人工门禁、暂停、重试和子 SOP 保留在运行状态中。",
+        "远端 Runner 经出站 HTTP 领取/续租/上报，WebSocket 加速控制；Runner 不直接访问 MySQL。",
+        "结果按 generation、在途状态及结果类型提交；失败 attempt 要匹配，不能让旧执行者随意覆盖。"
+      ]
+    },
+    {
+      "dot": "violet",
+      "title": "对话与工作区",
+      "items": [
+        "AssistantGeneration 后台执行，浏览器断开不会取消模型；事件与权威 transcript 持久化后供 SSE/HTTP 恢复。",
+        "工作区文件由 runtime/Agent/IDE 读写；Engine 保存 checkpoint 到 MySQL，use/save/restore token 防止并发覆盖。",
+        "CLI 使用角色资产和绑定凭据。Provider 与 sandbox 正交：CodeBuddy/Codex/Claude 等；Docker、bwrap、seatbelt 或 local。"
+      ]
+    },
+    {
+      "dot": "orange",
+      "title": "交付与产物消费",
+      "items": [
+        "Git 适配处理分支、push 和托管 API；SSH 只提供 Git 传输，Issue/PR 自动化另需托管 API。",
+        "预览从工作区归档静态包，归档 hold 延后清理；Bot 从持久通知队列发送，可处理旧审批卡片失效。",
+        "知识候选经授权来源与写开关审核后写回外部 MCP；报表读取执行/交付/用量事实。以上是条件能力，不是每次运行都全部触发。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Local 的独立数据闭环",
+      "items": [
+        "统一安装器把 Classic/Portable 资产放入目标项目，并维护 .devflow/install-state.json 文件哈希清单。",
+        "Portable 状态机生成阶段提示，宿主提供 Team/spawn 生命周期；协调者 finish 校验报告变化、内容与确认门禁。",
+        "artifacts/<task>/workflow-state.json 与报告保存在目标项目；Classic 使用自身宿主合同。Local 不依赖平台服务或 MySQL。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "配套能力与范围",
+      "items": [
+        "管理端覆盖项目/成员、需求、SOP 画布、角色/技能/MCP、执行机器、定时任务、统计、Room/Space 与页面反馈。",
+        "IDE 使用虚拟文件系统、SCM 和终端接口；Agent 浏览器使用执行端 Chromium/CDP。它们的请求与文件路径归入工作区与运行数据流。",
+        "模型 key 与 Git 凭据从责任人/项目规则解析；共享 key 和 Runner 本机登录按各自路径生效，公开输出必须脱敏。"
+      ]
+    }
+  ]
+}

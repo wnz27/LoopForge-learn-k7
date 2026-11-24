@@ -1,0 +1,2351 @@
+{
+  "ok": false,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1252,
+    1244
+  ],
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "浏览器工作台",
+      "x": 40,
+      "y": 40,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "平台 API 与业务域",
+      "x": 360,
+      "y": 40,
+      "width": 188,
+      "height": 108,
+      "pos": [
+        360,
+        40
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "SOP Engine / Worker",
+      "x": 680,
+      "y": 40,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        680,
+        40
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "本机执行 Runtime",
+      "x": 1000,
+      "y": 40,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        1000,
+        40
+      ]
+    },
+    {
+      "id": "mcp",
+      "type": "external",
+      "label": "外部 Agent 接入",
+      "x": 40,
+      "y": 245,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        245
+      ]
+    },
+    {
+      "id": "assistant",
+      "type": "backend",
+      "label": "Main Bot 与工具网关",
+      "x": 360,
+      "y": 245,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        360,
+        245
+      ]
+    },
+    {
+      "id": "runner",
+      "type": "backend",
+      "label": "个人 / 执行池 Runner",
+      "x": 680,
+      "y": 450,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        680,
+        450
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "执行宿主文件系统",
+      "x": 1000,
+      "y": 245,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        1000,
+        245
+      ]
+    },
+    {
+      "id": "schedule",
+      "type": "backend",
+      "label": "定时与共享 AI 任务",
+      "x": 40,
+      "y": 450,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        450
+      ]
+    },
+    {
+      "id": "repos",
+      "type": "backend",
+      "label": "21 个领域 Repo",
+      "x": 680,
+      "y": 245,
+      "width": 188,
+      "height": 108,
+      "pos": [
+        680,
+        245
+      ]
+    },
+    {
+      "id": "mysql",
+      "type": "database",
+      "label": "MySQL",
+      "x": 360,
+      "y": 450,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        360,
+        450
+      ]
+    },
+    {
+      "id": "providers",
+      "type": "external",
+      "label": "Agent CLI 与系统依赖",
+      "x": 1000,
+      "y": 450,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        1000,
+        450
+      ]
+    },
+    {
+      "id": "integrations",
+      "type": "backend",
+      "label": "外部集成适配层",
+      "x": 40,
+      "y": 655,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        655
+      ]
+    },
+    {
+      "id": "analysis",
+      "type": "backend",
+      "label": "观测、评估与经营分析",
+      "x": 360,
+      "y": 655,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        360,
+        655
+      ]
+    },
+    {
+      "id": "preview",
+      "type": "backend",
+      "label": "工作区、浏览器与预览",
+      "x": 680,
+      "y": 655,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        680,
+        655
+      ]
+    },
+    {
+      "id": "git",
+      "type": "external",
+      "label": "Git 仓库与托管 API",
+      "x": 1000,
+      "y": 655,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        1000,
+        655
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "external",
+      "label": "外部 MCP / 知识库 / Bot",
+      "x": 40,
+      "y": 860,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        860
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "backend",
+      "label": "构建、安装与发布",
+      "x": 1000,
+      "y": 860,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        1000,
+        860
+      ]
+    },
+    {
+      "id": "managed",
+      "type": "backend",
+      "label": "托管 CLI 维护",
+      "x": 680,
+      "y": 860,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        680,
+        860
+      ]
+    },
+    {
+      "id": "local",
+      "type": "backend",
+      "label": "LoopForge Local 安装器",
+      "x": 40,
+      "y": 1080,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        40,
+        1080
+      ]
+    },
+    {
+      "id": "host",
+      "type": "external",
+      "label": "本地宿主 Agent",
+      "x": 360,
+      "y": 1080,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        360,
+        1080
+      ]
+    },
+    {
+      "id": "localstate",
+      "type": "database",
+      "label": "目标项目文件与证据",
+      "x": 680,
+      "y": 1080,
+      "width": 188,
+      "height": 76,
+      "pos": [
+        680,
+        1080
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "独立 Local 产品：不依赖平台数据库",
+      "x": 22,
+      "y": 1056,
+      "width": 864,
+      "height": 120,
+      "wraps": [
+        "local",
+        "host",
+        "localstate"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "workbench",
+      "to": "api",
+      "label": "HTTP / SSE",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          228,
+          85.95
+        ],
+        [
+          360,
+          85.95
+        ]
+      ],
+      "labelAt": [
+        294,
+        76
+      ]
+    },
+    {
+      "from": "mcp",
+      "to": "api",
+      "label": "MCP → HTTP",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          228,
+          283
+        ],
+        [
+          294,
+          283
+        ],
+        [
+          294,
+          101
+        ],
+        [
+          360,
+          101
+        ]
+      ],
+      "labelAt": [
+        294,
+        182
+      ]
+    },
+    {
+      "from": "api",
+      "to": "engine",
+      "label": "授权派发",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          548,
+          85.95
+        ],
+        [
+          680,
+          85.95
+        ]
+      ],
+      "labelAt": [
+        614,
+        76
+      ]
+    },
+    {
+      "from": "api",
+      "to": "assistant",
+      "label": "后台生成",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          454,
+          148
+        ],
+        [
+          454,
+          172
+        ],
+        [
+          470,
+          172
+        ],
+        [
+          470,
+          221
+        ],
+        [
+          447,
+          221
+        ],
+        [
+          447,
+          245
+        ]
+      ],
+      "labelAt": [
+        440,
+        200
+      ]
+    },
+    {
+      "from": "api",
+      "to": "repos",
+      "label": "领域读写",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          548,
+          132
+        ],
+        [
+          696,
+          132
+        ],
+        [
+          696,
+          245
+        ]
+      ],
+      "labelAt": [
+        696,
+        179
+      ]
+    },
+    {
+      "from": "api",
+      "to": "schedule",
+      "label": "管理 job",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          360,
+          115
+        ],
+        [
+          328,
+          115
+        ],
+        [
+          328,
+          426
+        ],
+        [
+          127,
+          426
+        ],
+        [
+          127,
+          450
+        ]
+      ],
+      "labelAt": [
+        328,
+        261
+      ]
+    },
+    {
+      "from": "api",
+      "to": "integrations",
+      "label": "按配置调用",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          454,
+          40
+        ],
+        [
+          454,
+          16
+        ],
+        [
+          30,
+          16
+        ],
+        [
+          30,
+          631
+        ],
+        [
+          127,
+          631
+        ],
+        [
+          127,
+          655
+        ]
+      ],
+      "labelAt": [
+        65,
+        173
+      ]
+    },
+    {
+      "from": "api",
+      "to": "analysis",
+      "label": "报表 / 评估",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          148
+        ],
+        [
+          440,
+          172
+        ],
+        [
+          357,
+          172
+        ],
+        [
+          357,
+          631
+        ],
+        [
+          447,
+          631
+        ],
+        [
+          447,
+          655
+        ]
+      ],
+      "labelAt": [
+        399,
+        162
+      ]
+    },
+    {
+      "from": "api",
+      "to": "preview",
+      "label": "工作台请求",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          468,
+          148
+        ],
+        [
+          468,
+          213
+        ],
+        [
+          648,
+          213
+        ],
+        [
+          648,
+          631
+        ],
+        [
+          760,
+          631
+        ],
+        [
+          760,
+          655
+        ]
+      ],
+      "labelAt": [
+        626,
+        233
+      ]
+    },
+    {
+      "from": "assistant",
+      "to": "repos",
+      "label": "会话 / 事件",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          548,
+          276
+        ],
+        [
+          614,
+          276
+        ],
+        [
+          614,
+          292
+        ],
+        [
+          680,
+          292
+        ]
+      ],
+      "labelAt": [
+        614,
+        274
+      ]
+    },
+    {
+      "from": "assistant",
+      "to": "runtime",
+      "label": "本机调用",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          461,
+          245
+        ],
+        [
+          461,
+          208.5
+        ],
+        [
+          1039,
+          208.5
+        ],
+        [
+          1039,
+          140
+        ],
+        [
+          1066,
+          140
+        ],
+        [
+          1066,
+          116
+        ]
+      ],
+      "labelAt": [
+        606,
+        199
+      ]
+    },
+    {
+      "from": "assistant",
+      "to": "runner",
+      "label": "绑定机器",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          468,
+          321
+        ],
+        [
+          468,
+          418
+        ],
+        [
+          656,
+          418
+        ],
+        [
+          656,
+          488
+        ],
+        [
+          680,
+          488
+        ]
+      ],
+      "labelAt": [
+        438,
+        373
+      ]
+    },
+    {
+      "from": "schedule",
+      "to": "engine",
+      "label": "派发 SOP",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          141,
+          450
+        ],
+        [
+          141,
+          283
+        ],
+        [
+          746,
+          283
+        ],
+        [
+          746,
+          116
+        ]
+      ],
+      "labelAt": [
+        111,
+        370
+      ]
+    },
+    {
+      "from": "schedule",
+      "to": "assistant",
+      "label": "AI prompt",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          228,
+          481
+        ],
+        [
+          294,
+          481
+        ],
+        [
+          294,
+          283
+        ],
+        [
+          360,
+          283
+        ]
+      ],
+      "labelAt": [
+        294,
+        372
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "repos",
+      "label": "Run / lease",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          774,
+          116
+        ],
+        [
+          774,
+          245
+        ]
+      ],
+      "labelAt": [
+        774,
+        106
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "runtime",
+      "label": "本机执行",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          868,
+          78
+        ],
+        [
+          1000,
+          78
+        ]
+      ],
+      "labelAt": [
+        901,
+        68
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "runner",
+      "label": "经 API 派发",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          788,
+          116
+        ],
+        [
+          788,
+          242
+        ],
+        [
+          677,
+          242
+        ],
+        [
+          677,
+          426
+        ],
+        [
+          774,
+          426
+        ],
+        [
+          774,
+          450
+        ]
+      ],
+      "labelAt": [
+        825,
+        135
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "preview",
+      "label": "归档与 hold",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          116
+        ],
+        [
+          760,
+          168.5
+        ],
+        [
+          960.8000000000001,
+          168.5
+        ],
+        [
+          960.8000000000001,
+          631
+        ],
+        [
+          774,
+          631
+        ],
+        [
+          774,
+          655
+        ]
+      ],
+      "labelAt": [
+        860,
+        159
+      ]
+    },
+    {
+      "from": "runner",
+      "to": "api",
+      "label": "claim / WSS",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          450
+        ],
+        [
+          760,
+          356
+        ],
+        [
+          572.8,
+          356
+        ],
+        [
+          572.8,
+          172
+        ],
+        [
+          482,
+          172
+        ],
+        [
+          482,
+          148
+        ]
+      ],
+      "labelAt": [
+        723,
+        406
+      ]
+    },
+    {
+      "from": "runner",
+      "to": "runtime",
+      "label": "复用执行库",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          788,
+          450
+        ],
+        [
+          788,
+          381.5
+        ],
+        [
+          976,
+          381.5
+        ],
+        [
+          976,
+          93.05
+        ],
+        [
+          1000,
+          93.05
+        ]
+      ],
+      "labelAt": [
+        823,
+        419
+      ]
+    },
+    {
+      "from": "runtime",
+      "to": "files",
+      "label": "读写与恢复",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1108,
+          116
+        ],
+        [
+          1108,
+          245
+        ]
+      ],
+      "labelAt": [
+        1073,
+        184
+      ]
+    },
+    {
+      "from": "runtime",
+      "to": "providers",
+      "label": "启动 CLI",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1122,
+          116
+        ],
+        [
+          1122,
+          241
+        ],
+        [
+          1191,
+          241
+        ],
+        [
+          1191,
+          426
+        ],
+        [
+          1094,
+          426
+        ],
+        [
+          1094,
+          450
+        ]
+      ],
+      "labelAt": [
+        1157,
+        231
+      ]
+    },
+    {
+      "from": "repos",
+      "to": "mysql",
+      "label": "SQL / blob",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          680,
+          306
+        ],
+        [
+          572,
+          306
+        ],
+        [
+          572,
+          488
+        ],
+        [
+          548,
+          488
+        ]
+      ],
+      "labelAt": [
+        572,
+        387
+      ]
+    },
+    {
+      "from": "integrations",
+      "to": "tools",
+      "label": "MCP / Bot",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          127,
+          731
+        ],
+        [
+          127,
+          860
+        ]
+      ],
+      "labelAt": [
+        94,
+        799
+      ]
+    },
+    {
+      "from": "integrations",
+      "to": "git",
+      "label": "Issue / PR",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          141,
+          731
+        ],
+        [
+          141,
+          755
+        ],
+        [
+          976,
+          755
+        ],
+        [
+          976,
+          700
+        ],
+        [
+          1000,
+          700
+        ]
+      ],
+      "labelAt": [
+        559,
+        745
+      ]
+    },
+    {
+      "from": "integrations",
+      "to": "repos",
+      "label": "队列与配置",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          141,
+          655
+        ],
+        [
+          141,
+          504
+        ],
+        [
+          760,
+          504
+        ],
+        [
+          760,
+          353
+        ]
+      ],
+      "labelAt": [
+        106,
+        583
+      ]
+    },
+    {
+      "from": "analysis",
+      "to": "repos",
+      "label": "读取事实",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          548,
+          693
+        ],
+        [
+          614,
+          693
+        ],
+        [
+          614,
+          320
+        ],
+        [
+          680,
+          320
+        ]
+      ],
+      "labelAt": [
+        581,
+        683
+      ]
+    },
+    {
+      "from": "preview",
+      "to": "repos",
+      "label": "归档元数据",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          788,
+          655
+        ],
+        [
+          788,
+          529
+        ],
+        [
+          871,
+          529
+        ],
+        [
+          871,
+          377
+        ],
+        [
+          788,
+          377
+        ],
+        [
+          788,
+          353
+        ]
+      ],
+      "labelAt": [
+        753,
+        595
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "api",
+      "label": "打包与部署",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1094,
+          860
+        ],
+        [
+          1094,
+          504
+        ],
+        [
+          496,
+          504
+        ],
+        [
+          496,
+          148
+        ]
+      ],
+      "labelAt": [
+        1059,
+        774
+      ]
+    },
+    {
+      "from": "managed",
+      "to": "runtime",
+      "label": "版本协调",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          868,
+          898
+        ],
+        [
+          934,
+          898
+        ],
+        [
+          934,
+          62.95
+        ],
+        [
+          1000,
+          62.95
+        ]
+      ],
+      "labelAt": [
+        901,
+        888
+      ]
+    },
+    {
+      "from": "local",
+      "to": "host",
+      "label": "安装宿主资产",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          228,
+          1118
+        ],
+        [
+          360,
+          1118
+        ]
+      ],
+      "labelAt": [
+        294,
+        1108
+      ]
+    },
+    {
+      "from": "host",
+      "to": "localstate",
+      "label": "阶段产物",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          548,
+          1118
+        ],
+        [
+          680,
+          1118
+        ]
+      ],
+      "labelAt": [
+        614,
+        1108
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "git",
+      "label": "Git checkout",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          774,
+          40
+        ],
+        [
+          774,
+          16
+        ],
+        [
+          1212,
+          16
+        ],
+        [
+          1212,
+          693
+        ],
+        [
+          1188,
+          693
+        ]
+      ],
+      "labelAt": [
+        1172,
+        188
+      ]
+    },
+    {
+      "from": "runner",
+      "to": "git",
+      "label": "merge / push",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          868,
+          488
+        ],
+        [
+          976,
+          488
+        ],
+        [
+          976,
+          686
+        ],
+        [
+          1000,
+          686
+        ]
+      ],
+      "labelAt": [
+        1016,
+        590
+      ]
+    },
+    {
+      "from": "schedule",
+      "to": "repos",
+      "label": "job / 结果",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          134,
+          526
+        ],
+        [
+          134,
+          550
+        ],
+        [
+          892,
+          550
+        ],
+        [
+          892,
+          299
+        ],
+        [
+          868,
+          299
+        ]
+      ],
+      "labelAt": [
+        513,
+        540
+      ]
+    },
+    {
+      "from": "assistant",
+      "to": "tools",
+      "label": "授权 HTTP MCP",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          433,
+          245
+        ],
+        [
+          433,
+          221
+        ],
+        [
+          16,
+          221
+        ],
+        [
+          16,
+          898
+        ],
+        [
+          40,
+          898
+        ]
+      ],
+      "labelAt": [
+        225,
+        211
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "HTTP / SSE",
+      "x": 265,
+      "y": 66,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        294,
+        76
+      ]
+    },
+    {
+      "text": "MCP → HTTP",
+      "x": 265,
+      "y": 172,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        294,
+        182
+      ]
+    },
+    {
+      "text": "授权派发",
+      "x": 590,
+      "y": 66,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        614,
+        76
+      ]
+    },
+    {
+      "text": "后台生成",
+      "x": 416,
+      "y": 190,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        440,
+        200
+      ]
+    },
+    {
+      "text": "领域读写",
+      "x": 672,
+      "y": 169,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        696,
+        179
+      ]
+    },
+    {
+      "text": "管理 job",
+      "x": 304,
+      "y": 251,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        328,
+        261
+      ]
+    },
+    {
+      "text": "按配置调用",
+      "x": 36,
+      "y": 163,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        65,
+        173
+      ]
+    },
+    {
+      "text": "报表 / 评估",
+      "x": 367,
+      "y": 152,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        399,
+        162
+      ]
+    },
+    {
+      "text": "工作台请求",
+      "x": 597,
+      "y": 223,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        626,
+        233
+      ]
+    },
+    {
+      "text": "会话 / 事件",
+      "x": 583,
+      "y": 264,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        614,
+        274
+      ]
+    },
+    {
+      "text": "本机调用",
+      "x": 581,
+      "y": 189,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        606,
+        199
+      ]
+    },
+    {
+      "text": "绑定机器",
+      "x": 414,
+      "y": 363,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        438,
+        373
+      ]
+    },
+    {
+      "text": "派发 SOP",
+      "x": 87,
+      "y": 360,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        111,
+        370
+      ]
+    },
+    {
+      "text": "AI prompt",
+      "x": 267,
+      "y": 362,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        294,
+        372
+      ]
+    },
+    {
+      "text": "Run / lease",
+      "x": 743,
+      "y": 96,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        774,
+        106
+      ]
+    },
+    {
+      "text": "本机执行",
+      "x": 877,
+      "y": 58,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        901,
+        68
+      ]
+    },
+    {
+      "text": "经 API 派发",
+      "x": 794,
+      "y": 125,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        825,
+        135
+      ]
+    },
+    {
+      "text": "归档与 hold",
+      "x": 829,
+      "y": 149,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        860,
+        159
+      ]
+    },
+    {
+      "text": "claim / WSS",
+      "x": 691,
+      "y": 396,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        723,
+        406
+      ]
+    },
+    {
+      "text": "复用执行库",
+      "x": 794,
+      "y": 409,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        823,
+        419
+      ]
+    },
+    {
+      "text": "读写与恢复",
+      "x": 1044,
+      "y": 174,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1073,
+        184
+      ]
+    },
+    {
+      "text": "启动 CLI",
+      "x": 1132,
+      "y": 221,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        1157,
+        231
+      ]
+    },
+    {
+      "text": "SQL / blob",
+      "x": 543,
+      "y": 377,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        572,
+        387
+      ]
+    },
+    {
+      "text": "MCP / Bot",
+      "x": 68,
+      "y": 789,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        94,
+        799
+      ]
+    },
+    {
+      "text": "Issue / PR",
+      "x": 530,
+      "y": 735,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        559,
+        745
+      ]
+    },
+    {
+      "text": "队列与配置",
+      "x": 77,
+      "y": 573,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        106,
+        583
+      ]
+    },
+    {
+      "text": "读取事实",
+      "x": 557,
+      "y": 673,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        581,
+        683
+      ]
+    },
+    {
+      "text": "归档元数据",
+      "x": 724,
+      "y": 585,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        753,
+        595
+      ]
+    },
+    {
+      "text": "打包与部署",
+      "x": 1030,
+      "y": 764,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1059,
+        774
+      ]
+    },
+    {
+      "text": "版本协调",
+      "x": 877,
+      "y": 878,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        901,
+        888
+      ]
+    },
+    {
+      "text": "安装宿主资产",
+      "x": 260,
+      "y": 1098,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        294,
+        1108
+      ]
+    },
+    {
+      "text": "阶段产物",
+      "x": 590,
+      "y": 1098,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        614,
+        1108
+      ]
+    },
+    {
+      "text": "Git checkout",
+      "x": 1138,
+      "y": 178,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        1172,
+        188
+      ]
+    },
+    {
+      "text": "merge / push",
+      "x": 982,
+      "y": 580,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        1016,
+        590
+      ]
+    },
+    {
+      "text": "job / 结果",
+      "x": 484,
+      "y": 530,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        513,
+        540
+      ]
+    },
+    {
+      "text": "授权 HTTP MCP",
+      "x": 188,
+      "y": 201,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        225,
+        211
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "renderer",
+  "error": "Architecture layout validation failed:\n- [clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"mcp\" (unrelated to this relationship) on segment 0 [141, 450] -> [141, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"assistant\" (unrelated to this relationship) on segment 1 [141, 283] -> [746, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"repos\" (unrelated to this relationship) on segment 1 [141, 283] -> [746, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"runner\" (unrelated to this relationship) on segment 1 [141, 504] -> [760, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"schedule\" (unrelated to this relationship) on segment 0 [141, 655] -> [141, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"mysql\" (unrelated to this relationship) on segment 1 [141, 504] -> [760, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"assistant\" (unrelated to this relationship) on segment 2 [496, 504] -> [496, 148] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"runner\" (unrelated to this relationship) on segment 1 [1094, 504] -> [496, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"mysql\" (unrelated to this relationship) on segment 1 [1094, 504] -> [496, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"providers\" (unrelated to this relationship) on segment 0 [1094, 860] -> [1094, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"git\" (unrelated to this relationship) on segment 0 [1094, 860] -> [1094, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [composition/ambiguous-corridor] showcase architecture connections[1] id \"mcp-to-api\" \"mcp\" -> \"api\" shares a 66px corridor with connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" at [228, 283] -> [294, 283] (segments 0 and 1; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" shares a 66px corridor with connections[13] id \"schedule-to-assistant\" \"schedule\" -> \"assistant\" at [294, 283] -> [360, 283] (segments 1 and 2; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[18] id \"runner-to-api\" \"runner\" -> \"api\" shares a 94px corridor with connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" at [760, 356] -> [760, 450] (segments 0 and 2; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- [composition/ambiguous-corridor] showcase architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" shares a 264px corridor with connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" at [496, 504] -> [760, 504] (segments 1 and 1; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.\n- Label \"Run / lease\" overlaps component \"engine\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [743, 96, 63, 14]\n  component \"engine\" rect: [680, 40, 188, 76]\n  Suggested fix: set labelAt [774, 130] or set labelDy 24 (below); or set labelAt [774, 32] or set labelDy -74 (above)\n- [composition/label-route-clearance] showcase architecture label \"会话 / 事件\" on connections[9] id \"assistant-to-repos\" \"assistant\" -> \"repos\" label \"会话 / 事件\" is 2.6px from connections[8] id \"api-to-preview\" \"api\" -> \"preview\" label \"工作台请求\" segment 2 [648, 213] -> [648, 631] (label rect [583, 264, 63, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+  "diagnostics": [
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"mcp\" (unrelated to this relationship) on segment 0 [141, 450] -> [141, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 12,
+        "id": "schedule-to-engine",
+        "from": "schedule",
+        "to": "engine"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "mcp",
+        "segmentIndex": 0,
+        "from": [
+          141,
+          450
+        ],
+        "to": [
+          141,
+          283
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"assistant\" (unrelated to this relationship) on segment 1 [141, 283] -> [746, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 12,
+        "id": "schedule-to-engine",
+        "from": "schedule",
+        "to": "engine"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "assistant",
+        "segmentIndex": 1,
+        "from": [
+          141,
+          283
+        ],
+        "to": [
+          746,
+          283
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" crosses component \"repos\" (unrelated to this relationship) on segment 1 [141, 283] -> [746, 283] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 12,
+        "id": "schedule-to-engine",
+        "from": "schedule",
+        "to": "engine"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "repos",
+        "segmentIndex": 1,
+        "from": [
+          141,
+          283
+        ],
+        "to": [
+          746,
+          283
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"runner\" (unrelated to this relationship) on segment 1 [141, 504] -> [760, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 25,
+        "id": "integrations-to-repos",
+        "from": "integrations",
+        "to": "repos"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "runner",
+        "segmentIndex": 1,
+        "from": [
+          141,
+          504
+        ],
+        "to": [
+          760,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"schedule\" (unrelated to this relationship) on segment 0 [141, 655] -> [141, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 25,
+        "id": "integrations-to-repos",
+        "from": "integrations",
+        "to": "repos"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "schedule",
+        "segmentIndex": 0,
+        "from": [
+          141,
+          655
+        ],
+        "to": [
+          141,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" crosses component \"mysql\" (unrelated to this relationship) on segment 1 [141, 504] -> [760, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 25,
+        "id": "integrations-to-repos",
+        "from": "integrations",
+        "to": "repos"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "mysql",
+        "segmentIndex": 1,
+        "from": [
+          141,
+          504
+        ],
+        "to": [
+          760,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"assistant\" (unrelated to this relationship) on segment 2 [496, 504] -> [496, 148] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "assistant",
+        "segmentIndex": 2,
+        "from": [
+          496,
+          504
+        ],
+        "to": [
+          496,
+          148
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"runner\" (unrelated to this relationship) on segment 1 [1094, 504] -> [496, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "runner",
+        "segmentIndex": 1,
+        "from": [
+          1094,
+          504
+        ],
+        "to": [
+          496,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"mysql\" (unrelated to this relationship) on segment 1 [1094, 504] -> [496, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "mysql",
+        "segmentIndex": 1,
+        "from": [
+          1094,
+          504
+        ],
+        "to": [
+          496,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"providers\" (unrelated to this relationship) on segment 0 [1094, 860] -> [1094, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "providers",
+        "segmentIndex": 0,
+        "from": [
+          1094,
+          860
+        ],
+        "to": [
+          1094,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"git\" (unrelated to this relationship) on segment 0 [1094, 860] -> [1094, 504] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "git",
+        "segmentIndex": 0,
+        "from": [
+          1094,
+          860
+        ],
+        "to": [
+          1094,
+          504
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[1] id \"mcp-to-api\" \"mcp\" -> \"api\" shares a 66px corridor with connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" at [228, 283] -> [294, 283] (segments 0 and 1; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 1,
+        "id": "mcp-to-api",
+        "from": "mcp",
+        "to": "api"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 12,
+          "id": "schedule-to-engine",
+          "from": "schedule",
+          "to": "engine"
+        },
+        "overlapLengthPx": 66,
+        "minimumPx": 8,
+        "from": [
+          228,
+          283
+        ],
+        "to": [
+          294,
+          283
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" shares a 66px corridor with connections[13] id \"schedule-to-assistant\" \"schedule\" -> \"assistant\" at [294, 283] -> [360, 283] (segments 1 and 2; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 12,
+        "id": "schedule-to-engine",
+        "from": "schedule",
+        "to": "engine"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 13,
+          "id": "schedule-to-assistant",
+          "from": "schedule",
+          "to": "assistant"
+        },
+        "overlapLengthPx": 66,
+        "minimumPx": 8,
+        "from": [
+          294,
+          283
+        ],
+        "to": [
+          360,
+          283
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[18] id \"runner-to-api\" \"runner\" -> \"api\" shares a 94px corridor with connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" at [760, 356] -> [760, 450] (segments 0 and 2; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 18,
+        "id": "runner-to-api",
+        "from": "runner",
+        "to": "api"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 25,
+          "id": "integrations-to-repos",
+          "from": "integrations",
+          "to": "repos"
+        },
+        "overlapLengthPx": 94,
+        "minimumPx": 8,
+        "from": [
+          760,
+          356
+        ],
+        "to": [
+          760,
+          450
+        ],
+        "segmentIndex": 0,
+        "otherSegmentIndex": 2
+      },
+      "supportedFixes": [
+        "adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/ambiguous-corridor",
+      "severity": "error",
+      "message": "[composition/ambiguous-corridor] showcase architecture connections[25] id \"integrations-to-repos\" \"integrations\" -> \"repos\" shares a 264px corridor with connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" at [496, 504] -> [760, 504] (segments 1 and 1; minimum 8px) — adjust route/via or fromSide/toSide so distinct connections do not visually merge.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 25,
+        "id": "integrations-to-repos",
+        "from": "integrations",
+        "to": "repos"
+      },
+      "evidence": {
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 28,
+          "id": "delivery-to-api",
+          "from": "delivery",
+          "to": "api"
+        },
+        "overlapLengthPx": 264,
+        "minimumPx": 8,
+        "from": [
+          496,
+          504
+        ],
+        "to": [
+          760,
+          504
+        ],
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1
+      },
+      "supportedFixes": [
+        "adjust route/via or fromSide/toSide so distinct connections do not visually merge"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"会话 / 事件\" on connections[9] id \"assistant-to-repos\" \"assistant\" -> \"repos\" label \"会话 / 事件\" is 2.6px from connections[8] id \"api-to-preview\" \"api\" -> \"preview\" label \"工作台请求\" segment 2 [648, 213] -> [648, 631] (label rect [583, 264, 63, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 9,
+        "id": "assistant-to-repos",
+        "from": "assistant",
+        "to": "repos"
+      },
+      "evidence": {
+        "label": "会话 / 事件",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 8,
+          "id": "api-to-preview",
+          "from": "api",
+          "to": "preview"
+        },
+        "segmentIndex": 2,
+        "clearancePx": 2.6,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "assistant-to-repos",
+            "from": "assistant",
+            "to": "repos",
+            "label": "会话 / 事件",
+            "variant": "default"
+          },
+          "relationIndex": 9,
+          "label": "会话 / 事件",
+          "x": 582.6,
+          "y": 264,
+          "width": 62.8,
+          "height": 14,
+          "lx": 614,
+          "ly": 274
+        },
+        "from": [
+          648,
+          213
+        ],
+        "to": [
+          648,
+          631
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"Run / lease\" overlaps component \"engine\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [743, 96, 63, 14]\n  component \"engine\" rect: [680, 40, 188, 76]\n  Suggested fix: set labelAt [774, 130] or set labelDy 24 (below); or set labelAt [774, 32] or set labelDy -74 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "contract": "archify-architecture-layout-v1"
+}

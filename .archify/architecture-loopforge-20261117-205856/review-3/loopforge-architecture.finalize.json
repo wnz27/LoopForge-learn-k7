@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-17T13:14:25.743Z",
+  "specification": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+    "sha256": "48fba048695d8078d39e8b47c61345dcb3dca73fd89bec71e9b4235e35b8b691",
+    "bytes": 23826
+  },
+  "artifact": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+    "sha256": "bae01aa4d912ecd80b58f1a300f2f72a03b811a454d5b8fd65bf57315390d3af",
+    "bytes": 910652
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/Users/f27/.nvm/versions/node/v20.20.2/bin/node",
+        "/Users/f27/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "2833de8d-1795-4a5d-9c86-9729fb88ff92",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+        "output": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+        "error": "Architecture layout validation failed:\n- [clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"assistant\" (unrelated to this relationship) on segment 0 [496, 116] -> [496, 386] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"mysql\" (unrelated to this relationship) on segment 2 [767, 386] -> [767, 655] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"assistant\" (unrelated to this relationship) on segment 2 [482, 488] -> [482, 116] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"repos\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.\n- [clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"analysis\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+        "diagnostics": [
+          {
+            "code": "clean-flow/edge-through-node",
+            "severity": "error",
+            "message": "[clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"assistant\" (unrelated to this relationship) on segment 0 [496, 116] -> [496, 386] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 8,
+              "id": "api-to-preview",
+              "from": "api",
+              "to": "preview"
+            },
+            "evidence": {
+              "obstacleKind": "component",
+              "obstacleId": "assistant",
+              "segmentIndex": 0,
+              "from": [
+                496,
+                116
+              ],
+              "to": [
+                496,
+                385.5
+              ],
+              "clearancePx": 2
+            },
+            "supportedFixes": [
+              "adjust fromSide/toSide, set route/via, or move the component"
+            ]
+          },
+          {
+            "code": "clean-flow/edge-through-node",
+            "severity": "error",
+            "message": "[clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"mysql\" (unrelated to this relationship) on segment 2 [767, 386] -> [767, 655] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 8,
+              "id": "api-to-preview",
+              "from": "api",
+              "to": "preview"
+            },
+            "evidence": {
+              "obstacleKind": "component",
+              "obstacleId": "mysql",
+              "segmentIndex": 2,
+              "from": [
+                767,
+                385.5
+              ],
+              "to": [
+                767,
+                655
+              ],
+              "clearancePx": 2
+            },
+            "supportedFixes": [
+              "adjust fromSide/toSide, set route/via, or move the component"
+            ]
+          },
+          {
+            "code": "clean-flow/edge-through-node",
+            "severity": "error",
+            "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"assistant\" (unrelated to this relationship) on segment 2 [482, 488] -> [482, 116] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 28,
+              "id": "delivery-to-api",
+              "from": "delivery",
+              "to": "api"
+            },
+            "evidence": {
+              "obstacleKind": "component",
+              "obstacleId": "assistant",
+              "segmentIndex": 2,
+              "from": [
+                482,
+                488
+              ],
+              "to": [
+                482,
+                116
+              ],
+              "clearancePx": 2
+            },
+            "supportedFixes": [
+              "adjust fromSide/toSide, set route/via, or move the component"
+            ]
+          },
+          {
+            "code": "clean-flow/edge-through-node",
+            "severity": "error",
+            "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"repos\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 28,
+              "id": "delivery-to-api",
+              "from": "delivery",
+              "to": "api"
+            },
+            "evidence": {
+              "obstacleKind": "component",
+              "obstacleId": "repos",
+              "segmentIndex": 0,
+              "from": [
+                454,
+                860
+              ],
+              "to": [
+                454,
+                488
+              ],
+              "clearancePx": 2
+            },
+            "supportedFixes": [
+              "adjust fromSide/toSide, set route/via, or move the component"
+            ]
+          },
+          {
+            "code": "clean-flow/edge-through-node",
+            "severity": "error",
+            "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"analysis\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 28,
+              "id": "delivery-to-api",
+              "from": "delivery",
+              "to": "api"
+            },
+            "evidence": {
+              "obstacleKind": "component",
+              "obstacleId": "analysis",
+              "segmentIndex": 0,
+              "from": [
+                454,
+                860
+              ],
+              "to": [
+                454,
+                488
+              ],
+              "clearancePx": 2
+            },
+            "supportedFixes": [
+              "adjust fromSide/toSide, set route/via, or move the component"
+            ]
+          }
+        ],
+        "provenance": "failed",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"assistant\" (unrelated to this relationship) on segment 0 [496, 116] -> [496, 386] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 8,
+        "id": "api-to-preview",
+        "from": "api",
+        "to": "preview"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "assistant",
+        "segmentIndex": 0,
+        "from": [
+          496,
+          116
+        ],
+        "to": [
+          496,
+          385.5
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[8] id \"api-to-preview\" \"api\" -> \"preview\" crosses component \"mysql\" (unrelated to this relationship) on segment 2 [767, 386] -> [767, 655] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 8,
+        "id": "api-to-preview",
+        "from": "api",
+        "to": "preview"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "mysql",
+        "segmentIndex": 2,
+        "from": [
+          767,
+          385.5
+        ],
+        "to": [
+          767,
+          655
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"assistant\" (unrelated to this relationship) on segment 2 [482, 488] -> [482, 116] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "assistant",
+        "segmentIndex": 2,
+        "from": [
+          482,
+          488
+        ],
+        "to": [
+          482,
+          116
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"repos\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "repos",
+        "segmentIndex": 0,
+        "from": [
+          454,
+          860
+        ],
+        "to": [
+          454,
+          488
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    },
+    {
+      "code": "clean-flow/edge-through-node",
+      "severity": "error",
+      "message": "[clean-flow/edge-through-node] architecture connections[28] id \"delivery-to-api\" \"delivery\" -> \"api\" crosses component \"analysis\" (unrelated to this relationship) on segment 0 [454, 860] -> [454, 488] (2px clearance) — adjust fromSide/toSide, set route/via, or move the component.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 28,
+        "id": "delivery-to-api",
+        "from": "delivery",
+        "to": "api"
+      },
+      "evidence": {
+        "obstacleKind": "component",
+        "obstacleId": "analysis",
+        "segmentIndex": 0,
+        "from": [
+          454,
+          860
+        ],
+        "to": [
+          454,
+          488
+        ],
+        "clearancePx": 2
+      },
+      "supportedFixes": [
+        "adjust fromSide/toSide, set route/via, or move the component"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/review-3/loopforge-architecture.finalize.json",
+    "summaryReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/review-3/loopforge-architecture.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-11-17T13:14:26.609Z",
+  "durationMs": 865,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-15T13:43:30.839Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

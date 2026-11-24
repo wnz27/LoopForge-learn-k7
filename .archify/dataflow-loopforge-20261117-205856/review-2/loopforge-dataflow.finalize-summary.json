@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/candidate.json",
+    "sha256": "932dc4ffef5a6654daf57c6722d8ee55e76c4b1a2b204228e1d12c59de2ae012",
+    "bytes": 22455
+  },
+  "artifact": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.html",
+    "sha256": "0b1cd1a66f2b6ef7042231d4f6601c049a1ba44f0a63a512bb7d166204632e11",
+    "bytes": 901751
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/review-2/loopforge-dataflow.finalize.json",
+    "summaryReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/review-2/loopforge-dataflow.finalize-summary.json",
+    "browserCheckReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/review-2/loopforge-dataflow.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-15T13:43:30.839Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 6173,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 10,
+      "routesOverSuggestedBends": 9,
+      "routesOverSuggestedStretch": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "identity-dispatch",
+            "from": "identity",
+            "to": "dispatch",
+            "label": "授权派发",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "right": {
+            "id": "catalog-engine",
+            "from": "catalog",
+            "to": "engine",
+            "label": "图/角色",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "point": [
+            315,
+            227
+          ]
+        },
+        {
+          "left": {
+            "id": "catalog-engine",
+            "from": "catalog",
+            "to": "engine",
+            "label": "图/角色",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "trigger-dispatch",
+            "from": "trigger",
+            "to": "dispatch",
+            "label": "到期需求",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "point": [
+            207.5,
+            284
+          ]
+        },
+        {
+          "left": {
+            "id": "runner-runtime",
+            "from": "runner",
+            "to": "runtime",
+            "label": "命令/凭据",
+            "collectionIndex": 15,
+            "artifactIndex": 16
+          },
+          "right": {
+            "id": "engine-git",
+            "from": "engine",
+            "to": "git",
+            "label": "交付分支",
+            "collectionIndex": 25,
+            "artifactIndex": 26
+          },
+          "point": [
+            639,
+            286
+          ]
+        },
+        {
+          "left": {
+            "id": "runtime-outcome",
+            "from": "runtime",
+            "to": "outcome",
+            "label": "输出/gate",
+            "collectionIndex": 18,
+            "artifactIndex": 19
+          },
+          "right": {
+            "id": "engine-git",
+            "from": "engine",
+            "to": "git",
+            "label": "交付分支",
+            "collectionIndex": 25,
+            "artifactIndex": 26
+          },
+          "point": [
+            639.6000000000001,
+            372
+          ]
+        },
+        {
+          "left": {
+            "id": "runtime-outcome",
+            "from": "runtime",
+            "to": "outcome",
+            "label": "输出/gate",
+            "collectionIndex": 18,
+            "artifactIndex": 19
+          },
+          "right": {
+            "id": "runner-git",
+            "from": "runner",
+            "to": "git",
+            "label": "远端 Git",
+            "collectionIndex": 26,
+            "artifactIndex": 27
+          },
+          "point": [
+            639.6000000000001,
+            410
+          ]
+        },
+        {
+          "left": {
+            "id": "outcome-evidence",
+            "from": "outcome",
+            "to": "evidence",
+            "label": "产物/遥测",
+            "collectionIndex": 21,
+            "artifactIndex": 22
+          },
+          "right": {
+            "id": "git-hosting",
+            "from": "git",
+            "to": "hosting",
+            "label": "push/PR",
+            "collectionIndex": 27,
+            "artifactIndex": 28
+          },
+          "point": [
+            880,
+            385
+          ]
+        },
+        {
+          "left": {
+            "id": "outcome-evidence",
+            "from": "outcome",
+            "to": "evidence",
+            "label": "产物/遥测",
+            "collectionIndex": 21,
+            "artifactIndex": 22
+          },
+          "right": {
+            "id": "workspace-git",
+            "from": "workspace",
+            "to": "git",
+            "label": "代码/diff",
+            "collectionIndex": 28,
+            "artifactIndex": 29
+          },
+          "point": [
+            665,
+            445
+          ]
+        },
+        {
+          "left": {
+            "id": "git-hosting",
+            "from": "git",
+            "to": "hosting",
+            "label": "push/PR",
+            "collectionIndex": 27,
+            "artifactIndex": 28
+          },
+          "right": {
+            "id": "evidence-publish",
+            "from": "evidence",
+            "to": "publish",
+            "label": "事件/候选",
+            "collectionIndex": 32,
+            "artifactIndex": 33
+          },
+          "point": [
+            852.5,
+            385
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "catalog-dispatch",
+            "from": "catalog",
+            "to": "dispatch",
+            "label": "项目/仓库",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "bends": 4,
+          "stretch": 1.286
+        },
+        {
+          "relationship": {
+            "id": "catalog-engine",
+            "from": "catalog",
+            "to": "engine",
+            "label": "图/角色",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "bends": 4,
+          "stretch": 1.169,
+          "directCorridorBlockers": [
+            {
+              "id": "dispatch",
+              "label": "需求派发预留",
+              "box": [
+                259,
+                242,
+                112,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "relationship": {
+            "id": "trigger-assistant",
+            "from": "trigger",
+            "to": "assistant",
+            "label": "到期提示",
+            "collectionIndex": 11,
+            "artifactIndex": 12
+          },
+          "bends": 6,
+          "stretch": 2.066
+        },
+        {
+          "relationship": {
+            "id": "engine-runtime",
+            "from": "engine",
+            "to": "runtime",
+            "label": "本机调用",
+            "collectionIndex": 13,
+            "artifactIndex": 14
+          },
+          "bends": 4,
+          "stretch": 1.294
+        },
+        {
+          "relationship": {
+            "id": "outcome-evidence",
+            "from": "outcome",
+            "to": "evidence",
+            "label": "产物/遥测",
+            "collectionIndex": 21,
+            "artifactIndex": 22
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "runner-git",
+            "from": "runner",
+            "to": "git",
+            "label": "远端 Git",
+            "collectionIndex": 26,
+            "artifactIndex": 27
+          },
+          "bends": 4,
+          "stretch": 1.286
+        },
+        {
+          "relationship": {
+            "id": "workspace-git",
+            "from": "workspace",
+            "to": "git",
+            "label": "代码/diff",
+            "collectionIndex": 28,
+            "artifactIndex": 29
+          },
+          "bends": 4,
+          "stretch": 1.268
+        },
+        {
+          "relationship": {
+            "id": "workspace-publish",
+            "from": "workspace",
+            "to": "publish",
+            "label": "预览源文件",
+            "collectionIndex": 30,
+            "artifactIndex": 31
+          },
+          "bends": 4,
+          "stretch": 1.153,
+          "directCorridorBlockers": [
+            {
+              "id": "checkpoint",
+              "label": "工作区保存恢复",
+              "box": [
+                259,
+                470,
+                112,
+                58
+              ]
+            },
+            {
+              "id": "outcome",
+              "label": "结果校验与提交",
+              "box": [
+                474,
+                468,
+                112,
+                62
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": true
+    },
+    "repair": "Advisory only: this mode places or routes these relationships itself. Report them; do not remove relationships or meaning to reduce crossings."
+  }
+}

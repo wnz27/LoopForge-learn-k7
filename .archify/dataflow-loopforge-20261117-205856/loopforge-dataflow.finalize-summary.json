@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "dataflow",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/candidate.json",
+    "sha256": "932dc4ffef5a6654daf57c6722d8ee55e76c4b1a2b204228e1d12c59de2ae012",
+    "bytes": 22455
+  },
+  "artifact": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.html",
+    "sha256": "0b1cd1a66f2b6ef7042231d4f6601c049a1ba44f0a63a512bb7d166204632e11",
+    "bytes": 901751
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "fail"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome transport: Node v20.20.2, libuv 1.46.0, darwin; pid=19238, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.finalize.json",
+    "summaryReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.finalize-summary.json",
+    "browserCheckReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-15T13:43:30.839Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1098,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  }
+}

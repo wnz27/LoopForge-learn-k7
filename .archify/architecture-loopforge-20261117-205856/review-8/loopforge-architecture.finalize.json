@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-17T13:25:41.904Z",
+  "specification": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+    "sha256": "2864789275ebc6d68050191d1c8ec3f1cd8dabf46fad1915f348bdf7ef51ecff",
+    "bytes": 23830
+  },
+  "artifact": {
+    "path": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+    "sha256": "8512cb9f2c2501fdc8f0ca336627f44e4b9812253b603bd906ae33dbb9dfdd19",
+    "bytes": 914495
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/Users/f27/.nvm/versions/node/v20.20.2/bin/node",
+        "/Users/f27/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/Users/f27/learn/source_project/LoopForge-learn-k7",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "9d284520-1dec-4694-a2a3-2004afd59422",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/candidate.json",
+        "output": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/loopforge-architecture.html",
+        "error": "Architecture layout validation failed:\n- [composition/label-route-clearance] showcase architecture label \"读取事实\" on connections[26] id \"analysis-to-repos\" \"analysis\" -> \"repos\" label \"读取事实\" is 0px from connections[6] id \"api-to-integrations\" \"api\" -> \"integrations\" label \"按配置调用\" segment 2 [271, 539] -> [271, 1056] (label rect [240, 626, 48, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"归档元数据\" on connections[27] id \"preview-to-repos\" \"preview\" -> \"repos\" label \"归档元数据\" is 0px from connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" label \"派发 SOP\" segment 2 [548.6, 777] -> [548.6, 510] (label rect [525, 626, 58, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+        "diagnostics": [
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"读取事实\" on connections[26] id \"analysis-to-repos\" \"analysis\" -> \"repos\" label \"读取事实\" is 0px from connections[6] id \"api-to-integrations\" \"api\" -> \"integrations\" label \"按配置调用\" segment 2 [271, 539] -> [271, 1056] (label rect [240, 626, 48, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 26,
+              "id": "analysis-to-repos",
+              "from": "analysis",
+              "to": "repos"
+            },
+            "evidence": {
+              "label": "读取事实",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 6,
+                "id": "api-to-integrations",
+                "from": "api",
+                "to": "integrations"
+              },
+              "segmentIndex": 2,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "analysis-to-repos",
+                  "from": "analysis",
+                  "to": "repos",
+                  "label": "读取事实",
+                  "variant": "default"
+                },
+                "relationIndex": 26,
+                "label": "读取事实",
+                "x": 239.8,
+                "y": 626,
+                "width": 48.4,
+                "height": 14,
+                "lx": 264,
+                "ly": 636
+              },
+              "from": [
+                271,
+                539
+              ],
+              "to": [
+                271,
+                1056
+              ]
+            },
+            "supportedFixes": [
+              "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          },
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"归档元数据\" on connections[27] id \"preview-to-repos\" \"preview\" -> \"repos\" label \"归档元数据\" is 0px from connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" label \"派发 SOP\" segment 2 [548.6, 777] -> [548.6, 510] (label rect [525, 626, 58, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 27,
+              "id": "preview-to-repos",
+              "from": "preview",
+              "to": "repos"
+            },
+            "evidence": {
+              "label": "归档元数据",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 12,
+                "id": "schedule-to-engine",
+                "from": "schedule",
+                "to": "engine"
+              },
+              "segmentIndex": 2,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "preview-to-repos",
+                  "from": "preview",
+                  "to": "repos",
+                  "label": "归档元数据",
+                  "variant": "default"
+                },
+                "relationIndex": 27,
+                "label": "归档元数据",
+                "x": 525,
+                "y": 626,
+                "width": 58,
+                "height": 14,
+                "lx": 554,
+                "ly": 636
+              },
+              "from": [
+                548.6,
+                777
+              ],
+              "to": [
+                548.6,
+                510
+              ]
+            },
+            "supportedFixes": [
+              "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          }
+        ],
+        "provenance": "failed",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"读取事实\" on connections[26] id \"analysis-to-repos\" \"analysis\" -> \"repos\" label \"读取事实\" is 0px from connections[6] id \"api-to-integrations\" \"api\" -> \"integrations\" label \"按配置调用\" segment 2 [271, 539] -> [271, 1056] (label rect [240, 626, 48, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 26,
+        "id": "analysis-to-repos",
+        "from": "analysis",
+        "to": "repos"
+      },
+      "evidence": {
+        "label": "读取事实",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 6,
+          "id": "api-to-integrations",
+          "from": "api",
+          "to": "integrations"
+        },
+        "segmentIndex": 2,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "analysis-to-repos",
+            "from": "analysis",
+            "to": "repos",
+            "label": "读取事实",
+            "variant": "default"
+          },
+          "relationIndex": 26,
+          "label": "读取事实",
+          "x": 239.8,
+          "y": 626,
+          "width": 48.4,
+          "height": 14,
+          "lx": 264,
+          "ly": 636
+        },
+        "from": [
+          271,
+          539
+        ],
+        "to": [
+          271,
+          1056
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"归档元数据\" on connections[27] id \"preview-to-repos\" \"preview\" -> \"repos\" label \"归档元数据\" is 0px from connections[12] id \"schedule-to-engine\" \"schedule\" -> \"engine\" label \"派发 SOP\" segment 2 [548.6, 777] -> [548.6, 510] (label rect [525, 626, 58, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 27,
+        "id": "preview-to-repos",
+        "from": "preview",
+        "to": "repos"
+      },
+      "evidence": {
+        "label": "归档元数据",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 12,
+          "id": "schedule-to-engine",
+          "from": "schedule",
+          "to": "engine"
+        },
+        "segmentIndex": 2,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "preview-to-repos",
+            "from": "preview",
+            "to": "repos",
+            "label": "归档元数据",
+            "variant": "default"
+          },
+          "relationIndex": 27,
+          "label": "归档元数据",
+          "x": 525,
+          "y": 626,
+          "width": 58,
+          "height": 14,
+          "lx": 554,
+          "ly": 636
+        },
+        "from": [
+          548.6,
+          777
+        ],
+        "to": [
+          548.6,
+          510
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/review-8/loopforge-architecture.finalize.json",
+    "summaryReceipt": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/architecture-loopforge-20261117-205856/review-8/loopforge-architecture.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-11-17T13:25:42.605Z",
+  "durationMs": 700,
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.0",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-15T13:43:30.839Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

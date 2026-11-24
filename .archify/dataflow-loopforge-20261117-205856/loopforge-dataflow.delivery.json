@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a06d4dbe-4412-46d5-8d67-802492428645",
+  "status": "current",
+  "command": "deliver",
+  "type": "dataflow",
+  "input": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/candidate.json",
+  "output": "/Users/f27/learn/source_project/LoopForge-learn-k7/.archify/dataflow-loopforge-20261117-205856/loopforge-dataflow.html",
+  "specification": {
+    "sha256": "5edb0951938d8b98bd155a202f6ca680b4d89a6a63b6c59a09696bca97e59bd0",
+    "bytes": 23336
+  },
+  "artifact": {
+    "sha256": "72aab10b005c8ce1b002cdc6da388187c294ff850a6d0135fe1b580e22aeb15d",
+    "bytes": 909204
+  }
+}
